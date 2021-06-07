@@ -6,9 +6,15 @@ import './App.css';
 import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
 
+import { addOne } from './actions'
+
 function App() {
 
 	const [state, dispatch] = useReducer(reducer, initialState);
+
+	const eventHandler = (e) => {
+		dispatch(addOne())
+	}
 
   return (
     <div className="App">
@@ -33,7 +39,7 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={1}/>
+              <CalcButton onClick={eventHandler} value={1}/>
               <CalcButton value={2}/>
               <CalcButton value={3}/>
             </div>
