@@ -92,8 +92,6 @@ export const initialState = {
 * [ ] Create and attach event handlers to the `+`, `-` and `*` buttons that dispatch your new action creator. Make sure you pass in the appropriate operator string in each case.
 * [ ] **Test** that you can successfully change operators and apply numbers in each case.
 
-
-
 #### Create and connect a reducer case and action creator.
 > *Now let's add in the clear display feature. For this, you will be doing every part of the reducer / action creator process.*
 * [ ] Within `./reducers/index,` add in a case for `CLEAR_DISPLAY`. Clear display should set the total value in state to 0.

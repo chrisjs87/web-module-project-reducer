@@ -7,7 +7,8 @@ import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
 
 // import { addOne } from './actions'
-import { applyNumber, changeOperation, clearDisplay } from './actions'
+import { applyNumber, changeOperation, clearDisplay, 
+	changeMemoryM, addMemoryMR, clearMemoryMC } from './actions'
 
 function App() {
 
@@ -20,11 +21,9 @@ function App() {
 	const doMath = (number) => {
 		dispatch(applyNumber(number))
 	}
-
 	const opChange = (operator) => {
 		dispatch(changeOperation(operator))
 	}
-
 	const clear = () => {
 		dispatch(clearDisplay())
 	}
@@ -46,9 +45,9 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
-              <CalcButton value={"MR"}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton onClick={() => dispatch(changeMemoryM())} value={"M+"}/>
+              <CalcButton onClick={() => dispatch(addMemoryMR())} value={"MR"}/>
+              <CalcButton onClick={() => dispatch(clearMemoryMC())} value={"MC"}/>
             </div>
 
             <div className="row">
