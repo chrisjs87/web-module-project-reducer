@@ -7,7 +7,7 @@ import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
 
 // import { addOne } from './actions'
-import { applyNumber } from './actions'
+import { applyNumber, changeOperation } from './actions'
 
 function App() {
 
@@ -19,6 +19,10 @@ function App() {
 
 	const doMath = (number) => {
 		dispatch(applyNumber(number))
+	}
+
+	const opChange = (operator) => {
+		dispatch(changeOperation(operator))
 	}
 
   return (
@@ -62,9 +66,9 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={"+"}/>
-              <CalcButton value={"*"}/>
-              <CalcButton value={"-"}/>
+              <CalcButton onClick={() => opChange("+")} value={"+"}/>
+              <CalcButton onClick={() => opChange("*")} value={"*"}/>
+              <CalcButton onClick={() => opChange("-")} value={"-"}/>
             </div>
 
             <div className="row ce_button">
