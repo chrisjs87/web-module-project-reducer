@@ -10,7 +10,14 @@ This module explored the reducer pattern. During the module, you studied what im
 - Learn how to step through and test thoroughly each step of the process.
 
 ## Introduction
-In this project, you will build an complete a simple calculator app that can add, multiply, subtract and clear numbers in any order as well as add in memory save and recall features. You will start by adding in missing pieces to the code and complete the process by building features in to the UI, reducer and actions files from scratch.
+In this project, you will build and complete a simple calculator app that can 
+add, 
+multiply, 
+subtract 
+and clear numbers in any order as well as 
+add in memory save and 
+recall features. 
+You will start by adding in missing pieces to the code and complete the process by building features in to the UI, reducer and actions files from scratch.
 
 This simplified calculator adds the entire number selected, rather then adds digits into end of number. In the end of the process, your calculator should function as follows:
 
@@ -51,8 +58,12 @@ export const initialState = {
 ```
 * [ ] Check to see that your display correctly reflects the change to your state.
 
+
+------------------------HERE------------------------
+
+
 #### Connect a premade action.
-> *Now that we can see our state, let's change allow the user to change it. Let's start with a simple premade action...adding one to our total.*
+> *Now that we can see our state, let's allow the user to change it. Let's start with a simple premade action...adding one to our total.*
 * [ ] Note the `ADD_ONE` action case (in ./reducer/index.js) and `addOne` action creator (in ./actions/index.js). This action adds 1 to our total.
 * [ ] Import the `addOne` action creator into App.js.
 * [ ] Within `App.js`, create an event handler connected to the 1 button's `onClick` method.
@@ -62,7 +73,8 @@ export const initialState = {
 
 
 #### Connect a better premade action.
-> *Adding indivisual actions for every number would be tedious. Let's add in an action that can work for ALL numerical input*
+> *Adding individual actions for every number would be tedious. Let's add in an action that can work for ALL numerical input*
+
 * [ ] Note the `APPLY_NUMBER` action case (in ./reducer/index.js) and `applyNumber` action creator (in ./actions/index.js). This action adds, multiplies or subtracts a number passed into the action creator.
 * [ ] Import the `applyNumber` action creator into `App.js.`
 * [ ] Remove or comment out the `addOne` event handler from the 1 button.
@@ -87,6 +99,8 @@ export const initialState = {
 * [ ] Within `App.js,` import in your clearDisplay action creator.
 * [ ] Create and connect an event handler to the "CE" button that dispatches your clearDisplay action creator.
 * [ ] **Test** that your clearDisplay button works as expected.
+
+
 
 #### Add in memory functions from scratch.
 > *Congratulations! You have gone through the entire process for adding an action to your app! Now, see if you can follow the same process (reducer case => action creator => UI connection) for the following app features. IN EACH CASE, ALWAYS TEST THAT YOUR FEATURE WORKS BEFORE PROCEEDING FORWARD.*
